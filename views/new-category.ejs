@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Category</title>
+    <style>
+        body { font-family: sans-serif; max-width: 500px; margin: 0 auto; padding: 20px; }
+        nav { background: #f4f4f4; padding: 10px; margin-bottom: 20px; border-radius: 4px; }
+        nav a { margin-right: 15px; text-decoration: none; color: #0066cc; }
+        label { font-weight: bold; display: block; margin-top: 10px; }
+        input, textarea, button { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+        button { background: #28a745; color: white; border: none; cursor: pointer; margin-top: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/products">📦 View Catalog</a>
+        <a href="/products/new">➕ Add Product</a>
+        <a href="/categories/new">📁 Add Category</a>
+    </nav>
+
+    <h1>Add New Category</h1>
+
+    <form action="/categories" method="POST">
+        <label for="name">Category Name:</label>
+        <input type="text" id="name" name="name" required placeholder="e.g., Electronics, Apparel">
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="3" placeholder="Optional details..."></textarea>
+
+        <button type="submit">Save Category</button>
+    </form>
+
+</body>
+</html>
